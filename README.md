@@ -30,7 +30,7 @@ This field returns the image file that you selected. So it has all the propertie
 or maybe something a little more custom
 
 ``` html
-<img src="{{image_chooser.path}}" title="{{image_chooser.name}}" id="{{image_chooser.id}}">
+<img src="{{my_chosen_slug.path}}" title="{{my_chosen_slug.name}}" id="{{my_chosen_slug.id}}">
 ```
 
 Upcoming
