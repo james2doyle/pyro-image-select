@@ -1,39 +1,88 @@
 .image_select {
-  display: block;
-  margin: 0;
-  padding: 0;
+	display: block;
+	margin: 0;
+	padding: 0;
 }
 
 .image_select li {
-  list-style: none;
-  margin-right: 1em;
-  display: inline-block;
-  border: 2px solid white;
-  background: black;
+	list-style: none;
+	display: inline-block;
+	background: #fff;
+}
+
+.image_select li.hidden_folder
+{
+	display:none;
+}
+
+.image_select li.folder_title
+{
+	display: inline-block;
+	float: left;
+	width: 120px;
+	height: 120px;
+	background-color: #eee;
+	border: 2px solid white;
+	text-align: center;
+	overflow: hidden;
+	font-size: 1em;
+
+	font-weight: normal;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	cursor: pointer;
+}
+
+.image_select li.folder_title.active_title
+{
+	border: 1px dashed #999;
+	font-weight: bold;
+	
+}
+
+.image_select .open_folder
+{
+	border: 1px dashed #999;
+	clear: both;
+	margin: 1em;
+	padding: 1em;
 }
 
 .image_select li img {
-  -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
-  filter: alpha(opacity=50);
-  opacity: 0.5;
-  -webkit-transition: opacity 0.2s ease;
-  -moz-transition: opacity 0.2s ease;
-  -o-transition: opacity 0.2s ease;
-  -ms-transition: opacity 0.2s ease;
-  transition: opacity 0.2s ease;
+	border: 2px solid white;
+	margin: 0px;
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+	filter: alpha(opacity=50);
+	opacity: 0.5;
+	-webkit-transition: opacity 0.2s ease;
+	-moz-transition: opacity 0.2s ease;
+	-o-transition: opacity 0.2s ease;
+	-ms-transition: opacity 0.2s ease;
+	transition: opacity 0.2s ease;
+	cursor: pointer;
+}
+
+.image_select li.folder_title img
+{
+	border: 0;
 }
 
 .image_select li:hover img {
-  filter: alpha(opacity=100);
-  opacity: 1;
+	filter: alpha(opacity=100);
+	opacity: 1;
 }
 
-.image_select li.active {
-  border: 2px solid #A51214;
+.image_select li.active img{
+	border: 2px solid #A51214;
 }
 
 .image_select li.active img {
-  -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-  filter: alpha(opacity=100);
-  opacity: 1;
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+	filter: alpha(opacity=100);
+	opacity: 1;
 }
+
