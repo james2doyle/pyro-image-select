@@ -65,8 +65,10 @@ class Field_image_select
 		$hidden_input = "<input id='input_$data[form_slug]' name='$data[form_slug]' type='hidden' value='$data[value]' >";
 		$image_list = "<ul>";
 		foreach ($files['data']['file'] as $file) {
-			$class = ($file->id == $data['value']) ? 'class="active"': '';
-			$image_list .= "<li $class><img title='$file->name' id='$file->id' src='".BASE_URL."/files/thumb/$file->filename/120/120/fit' /></li>";
+			if ($file->type == 'i') {
+				$class = ($file->id == $data['value']) ? 'class="active"': '';
+				$image_list .= "<li $class><img title='$file->name' id='$file->id' src='".BASE_URL."/files/thumb/$file->filename/120/120/fit' /></li>";
+			}
 		}
 		$image_list."</ul>";
 		return "<div id='$data[form_slug]' class='image_select'>".$hidden_input.$image_list."</div>";
