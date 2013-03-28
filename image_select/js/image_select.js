@@ -1,6 +1,7 @@
 (function($){
   $.fn.imageSelect = function() {
     var $this = $(this);
+    var $list = $this.find('li');
     var $input = $('#input_'+$this.attr('id'));
     function changeInput(id, $parent, callback) {
       $input.val(id);
@@ -10,9 +11,13 @@
     }
     $this.on('click', 'img', function(){
       changeInput($(this).attr('id'), $(this).parent(), function($item){
-        $this.find('li').removeClass('active');
+        $list.removeClass('active');
         $item.addClass('active');
       });
+    });
+    $this.on('click', '.active', function() {
+      $(this).removeClass('active');
+      $input.val('');
     });
     return $this;
   };
