@@ -12,7 +12,7 @@ class Field_image_select
 {
 	public $field_type_slug    = 'image_select';
 	public $db_col_type        = 'text';
-	public $version            = '1.0.0';
+	public $version            = '1.0.1';
 	public $author             = array('name'=>'James Doyle', 'url'=>'http://github.com/james2doyle/pyro-image-select');
 	public $custom_parameters  = array('folder_select');
 
