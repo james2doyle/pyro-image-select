@@ -16,6 +16,22 @@ Visually select images using a field type in PyroCMS
 * Choose a parent folder to draw images from
 * Enjoy it on a page
 
+In the layout
+-------------
+
+This field returns the image file that you selected. So it has all the properties you will need. But here is the basic usage.
+
+``` html
+{{ files:image id=my_chosen_slug.id }}
+```
+
+or maybe something a little more custom
+
+``` html
+<img src="{{image_chooser.path}}" title="{{image_chooser.name}}" width="300" class="crazy-image" id="{{image_chooser.id}}">
+```
+
+
 ### Upcoming
 
 * Multi-Select
