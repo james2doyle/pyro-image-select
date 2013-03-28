@@ -3,6 +3,7 @@
     var $this = $(this);
     var $list = $this.find('li');
     var $input = $('#input_'+$this.attr('id'));
+    console.log($input);
     function changeInput(id, $parent, callback) {
       $input.val(id);
       if (callback && typeof(callback) === "function") {
@@ -22,6 +23,8 @@
     return $this;
   };
   $(document).ready(function() {
-    $('.image_select').imageSelect();
+    $('.image_select').each(function() {
+      $(this).imageSelect();
+    });
   });
 })(jQuery);
