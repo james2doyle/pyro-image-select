@@ -9,15 +9,17 @@ Visually select images using a field type in PyroCMS
 
 ![Image Selected](https://raw.github.com/james2doyle/pyro-image-select/master/screen3.png)
 
-### How To Use
+How To Use
+----------
+
+### Basics
 
 * Add the field type as you would normally
 * Choose "Image Select" as the type
 * Choose a parent folder to draw images from
 * Enjoy it on a page
 
-In the layout
--------------
+### In the layout
 
 This field returns the image file that you selected. So it has all the properties you will need. But here is the basic usage.
 
@@ -28,14 +30,17 @@ This field returns the image file that you selected. So it has all the propertie
 or maybe something a little more custom
 
 ``` html
-<img src="{{image_chooser.path}}" title="{{image_chooser.name}}" width="300" class="crazy-image" id="{{image_chooser.id}}">
+<img src="{{image_chooser.path}}" title="{{image_chooser.name}}" id="{{image_chooser.id}}">
 ```
 
-
-### Upcoming
+Upcoming
+--------
 
 * Multi-Select
 * Ordering
+
+License
+-------
 
 (The MIT License)
 
