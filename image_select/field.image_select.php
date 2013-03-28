@@ -11,7 +11,7 @@
 class Field_image_select
 {
 	public $field_type_slug    = 'image_select';
-	public $db_col_type        = 'varchar';
+	public $db_col_type        = 'text';
 	public $version            = '1.0.0';
 	public $author             = array('name'=>'James Doyle', 'url'=>'http://github.com/james2doyle/pyro-image-select');
 	public $custom_parameters  = array('folder_select');
@@ -66,7 +66,7 @@ class Field_image_select
 		$image_list = "<ul>";
 		foreach ($files['data']['file'] as $file) {
 			$class = ($file->id == $data['value']) ? 'class="active"': '';
-			$image_list .= "<li $class><img id='$file->id' src='".BASE_URL."/files/thumb/$file->filename/120/120/fit' /></li>";
+			$image_list .= "<li $class><img title='$file->name' id='$file->id' src='".BASE_URL."/files/thumb/$file->filename/120/120/fit' /></li>";
 		}
 		$image_list."</ul>";
 		return "<div id='$data[form_slug]' class='image_select'>".$hidden_input.$image_list."</div>";
