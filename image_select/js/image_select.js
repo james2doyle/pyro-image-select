@@ -20,6 +20,10 @@
       $(this).removeClass('active');
       $input.val('');
     });
+	$this.on('click', '.folder_title', function() {
+		$(this).toggleClass("active_title");
+		$this.find(".folder_item_" + $(this).attr('id')).toggleClass("hidden_folder").toggleClass("open_folder");
+	});
     return $this;
   };
   $(document).ready(function() {
