@@ -31,6 +31,14 @@ class Field_image_select
 	public function pre_output($input, $data)
 	{
 		$file = Files::get_file($input);
+		$filedata = $file['data'];
+		$image = "<img title='$filedata->name' id='$filedata->id' src='".BASE_URL."/files/thumb/$filedata->filename/100/100/fit' />";
+		return $image;
+	}
+	
+	public function pre_output_plugin($input, $data)
+	{
+		$file = Files::get_file($input);
 		return (array)$file['data'];
 	}
 
