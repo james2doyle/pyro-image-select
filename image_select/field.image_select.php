@@ -32,7 +32,10 @@ class Field_image_select
 	{
 		$file = Files::get_file($input);
 		$filedata = $file['data'];
-		$image = "<img title='$filedata->name' id='$filedata->id' src='".BASE_URL."/files/thumb/$filedata->filename/100/100/fit' />";
+		if($filedata)
+		{
+			$image = "<img title='$filedata->name' id='$filedata->id' src='".BASE_URL."/files/thumb/$filedata->filename/100/100/fit' />";
+		}
 		return $image;
 	}
 	
