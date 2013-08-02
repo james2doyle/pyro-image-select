@@ -24,13 +24,13 @@ How To Use
 This field returns the image file that you selected. So it has all the properties you will need. But here is the basic usage.
 
 ``` html
-{{ files:image id=my_chosen_slug.id }}
+{{ files:image id=page:my_chosen_slug:id }}
 ```
 
 or maybe something a little more custom
 
 ``` html
-<img src="{{my_chosen_slug.path}}" title="{{my_chosen_slug.name}}" id="{{my_chosen_slug.id}}">
+<img src="{{ page:my_chosen_slug:path }}" title="{{ page:my_chosen_slug:name }}" id="{{ page:my_chosen_slug:id }}">
 ```
 
 Upcoming
